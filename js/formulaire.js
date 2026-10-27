@@ -12,7 +12,7 @@
    À chaque nouvelle adresse, FormSubmit envoie un e-mail
    « Activate Form » à cette adresse : il faut cliquer dessus une fois.
    --------------------------------------------------------- */
-var EMAIL_DESTINATION = 'Contact@amhmazbullding.com';
+var EMAIL_DESTINATION = 'amhmazbullding@gmail.com';
 
 (function () {
   'use strict';
