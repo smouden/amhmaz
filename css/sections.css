@@ -1144,3 +1144,51 @@ body.no-scroll {
     row-gap: 12px;
   }
 }
+
+/* =========================================================
+   Vidéos de réalisations : deux vidéos côte à côte
+   ========================================================= */
+.videos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.video-card {
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.video-card video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--night);
+  border-radius: 2px;
+  box-shadow: 0 30px 60px -40px rgba(13, 21, 34, .55);
+}
+
+.video-card figcaption span {
+  display: block;
+  font-family: var(--f-label);
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-size: .78rem;
+  color: #b47a0c;
+}
+
+.video-card figcaption b {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--ink);
+}
+
+/* Sur téléphone : une vidéo sous l'autre */
+@media (max-width: 760px) {
+  .videos {
+    grid-template-columns: 1fr;
+  }
+}
